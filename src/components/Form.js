@@ -1,4 +1,22 @@
 import React, { useState } from 'react';
+import Styled from 'styled-components';
+
+
+const Entry = Styled.div`
+display: flex;
+flex-flow: column;
+justify-content: center;
+align-items: center;
+margin-top: 1%;
+`
+
+const Button = Styled.button`
+font-size: 1rem;
+margin-top: 2%;
+border-radius: 10px;
+padding: 0.5% 1%;
+cursor: pointer;
+`
 
 const TeamList = props => {
     const [member, setMember] = useState({
@@ -19,20 +37,20 @@ const TeamList = props => {
 
     return (
         <form onSubmit={submitForm}>
-            <div>
+            <Entry>
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" name="name" onChange={handleChanges} value={member.name} />
-            </div>
-            <div>
+            </Entry>
+            <Entry>
                 <label htmlFor="email">Email</label>
                 <input type="email" id="email" name="email" onChange={handleChanges} value={member.email} />
-            </div>
-            <div>
+            </Entry>
+            <Entry>
                 <label htmlFor="position">Position</label>
                 <input type="text" id="position" name="position" onChange={handleChanges} value={member.position} />
-            </div>
+            </Entry>
 
-            <button type="submit">Add New Member</button>
+            <Button className='submit-button' type="submit">Add New Member</Button>
         </form>
     );
 };
