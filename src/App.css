@@ -39,19 +39,20 @@
 }
 
 .submit-button {
-  background: linear-gradient(45deg, papayawhip 40%, white 40%);
+  background: linear-gradient(45deg, papayawhip 40%, darkgrey 40%);
   position: relative;
+  color: white;
 }
 
 .submit-button:after {
-  content: "";
+  /* content: ""; */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(45deg, white 40%, papayawhip 40%);
-  z-index: -1;
+  background: linear-gradient(45deg, darkgrey 40%, papayawhip 40%);
+  /* z-index: -1; */
 }
 
 .submit-button,
@@ -64,4 +65,5 @@
 .submit-button:hover,
 .submit-button:hover:after {
   background-position: 0;
+  color: black;
 }

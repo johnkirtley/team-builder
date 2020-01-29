@@ -16,6 +16,7 @@ margin-top: 2%;
 border-radius: 10px;
 padding: 0.5% 1%;
 cursor: pointer;
+border: 2px solid darkgrey;
 `
 
 const TeamList = props => {
