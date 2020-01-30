@@ -32,8 +32,12 @@ const TeamList = props => {
 
     const submitForm = (e) => {
         e.preventDefault();
-        props.addNewMember(member);
-        setMember({ name: '', email: '', position: '' });
+        if (member.name.length === 0) {
+            return;
+        } else {
+            props.addNewMember(member);
+            setMember({ name: '', email: '', position: '' });
+        }
     };
 
     return (

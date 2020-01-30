@@ -20,7 +20,7 @@ function App() {
       <h1>Add New Member</h1>
       <Form addNewMember={addNewMember} />
       <TeamMember teamMember={teamMember} />
-
+      {console.log(teamMember)}
     </div>
   );
 }
